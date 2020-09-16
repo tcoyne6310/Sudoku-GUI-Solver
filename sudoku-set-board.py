@@ -14,7 +14,6 @@ board = [
 
 def solve(bo):
 
-    #   print(bo)  #  uncomment to see every step
     find = find_empty(bo)
     if not find:
         return True
@@ -57,6 +56,7 @@ def valid(bo, num, pos):
 
 
 def print_board(bo):
+
     for i in range(len(bo)):
         if i % 3 == 0 and i != 0:
             print("- - - - - - - - - - - - - -")
@@ -72,11 +72,13 @@ def print_board(bo):
 
 
 def find_empty(bo):
+
     for i in range(len(bo)):
         for j in range(len(bo[0])):
             if bo[i][j] == 0:
                 return i, j  # row, col
     return None
+
 
 print_board(board)
 solve(board)
